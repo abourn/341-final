@@ -1,0 +1,28 @@
+view "internal" {
+	match-destinations { localhost; 172.23.8.1; };
+	recursion yes;
+	allow-query { localhost; 172.23.8.0/24; };
+
+ 	zone "corp.lodge.pi" IN {
+		type master;
+		file "/etc/bind/zones/db.corp.lodge.pi";
+	};
+
+	zone "lodge.pi" IN {
+		type master;
+		file "/etc/bind/zones/db.lodge.pi";
+	};
+
+	include "/etc/bind/named.conf.default-zones";
+};
+
+view "external" {
+	match-destinations { 172.23.8.130; };
+	recursion no;
+	allow-query { any; };
+
+	zone "lodge.pi" IN {
+		type master;
+		file "/etc/bind/zones/db.lodge.pi";
+	};
+};

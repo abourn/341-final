@@ -1,0 +1,16 @@
+;
+; BIND data file for lodge.pi public zone
+;
+$TTL	604800
+lodge.pi.	IN	SOA	ns1.lodge.pi. hostmaster.lodge.pi. (
+			      2018060301		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+lodge.pi.	IN	NS	 ns1.lodge.pi.
+ns1		IN	A	172.23.8.130
+
+lodge.pi. 	IN	MX	10 mail.lodge.pi.
+mail 		IN	A	172.23.8.131

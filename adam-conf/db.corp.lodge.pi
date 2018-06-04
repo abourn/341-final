@@ -1,0 +1,17 @@
+;
+; BIND data file for corp.lodge.pi private zone
+;
+$TTL	604800
+corp.lodge.pi.	IN	SOA	adam.corp.lodge.pi. hostmaster.corp.lodge.pi. (
+			      2018060301		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+corp.lodge.pi.	IN	NS	adam.corp.lodge.pi.
+adam	IN	A	172.23.8.1
+
+corp.lodge.pi.	IN 	MX	 10 mail.corp.lodge.pi.
+mail 		IN	A 	172.23.8.131
+
