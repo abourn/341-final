@@ -1,13 +1,13 @@
 $TTL	604800
-@	IN	SOA	gigabits.pi. hostmaster.gigabits.pi. (
+@	IN	SOA	keylime.pi. hostmaster.keylime.pi. (
 	             2018060102      	; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
 			 604800 )	; Negative Cache TTL
 ;
-gigabits.pi.	IN	NS	ns1.gigabits.pi.
+gigabits.pi.	IN	NS	ns1.keylime.pi.
 ns1		IN	A	172.23.0.130
 
-gigabits.pi.	IN	MX	10 mail.gigabits.pi.
+gigabits.pi.	IN	MX	10 mail.keylime.pi.
 mail		IN	A	172.23.0.131
