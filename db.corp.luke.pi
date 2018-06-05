@@ -1,0 +1,16 @@
+;
+; BIND data file for corp.luke.pi private zone
+;
+$TTL	604800
+corp.luke.pi.	IN	SOA	luke.corp.luke.pi. hostmaster.corp.luke.pi. (
+			      2018060301		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+corp.luke.pi.	IN	NS	luke.corp.luke.pi.
+luke	IN	A	172.23.11.1
+
+corp.luke.pi.	IN 	MX	 10 mail.corp.luke.pi.
+mail 		IN	A 	172.23.11.131
