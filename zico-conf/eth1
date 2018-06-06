@@ -1,0 +1,7 @@
+allow-hotplug eth1
+
+iface eth1 inet manual
+iface eth1 inet6 auto
+  pritext 0
+  accept_ra 2
+
